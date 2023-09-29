@@ -28,10 +28,10 @@ jobs:
     - name: Test
       run: dotnet test TrainingLogbuch/TrainingLogbuch.sln --no-build
 
-    - name: Check test results and push on success
+    - name: Check test results
       run: |
-        if [ -f "TrainingLogbuch/UnitTest/TestResults/TESTS-TestAdapter.xml" ]; then
-          echo "Tests were successful. Pushing changes to main..."
+        if [ $? -eq 0 ]; then
+          echo "Tests were successful. Proceeding with the push to main..."
           git config --global user.email "ubo3694@students.fhv.at"
           git config --global user.name "ubo3694"
           git add .
