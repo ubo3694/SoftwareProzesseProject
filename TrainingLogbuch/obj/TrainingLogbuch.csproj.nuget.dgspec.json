@@ -52,9 +52,17 @@
               "target": "Package",
               "version": "[7.0.11, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.1, )"
             }
           },
           "imports": [
