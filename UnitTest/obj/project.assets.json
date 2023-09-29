@@ -7352,34 +7352,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ugurc\\.nuget\\packages\\": {}
+    "/home/runner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ugurc\\Desktop\\Trainingslog\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "/home/runner/work/SoftwareProzesseProject/SoftwareProzesseProject/UnitTest/UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "C:\\Users\\ugurc\\Desktop\\Trainingslog\\UnitTest\\UnitTest.csproj",
-      "packagesPath": "C:\\Users\\ugurc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ugurc\\Desktop\\Trainingslog\\UnitTest\\obj\\",
+      "projectPath": "/home/runner/work/SoftwareProzesseProject/SoftwareProzesseProject/UnitTest/UnitTest.csproj",
+      "packagesPath": "/home/runner/.nuget/packages/",
+      "outputPath": "/home/runner/work/SoftwareProzesseProject/SoftwareProzesseProject/UnitTest/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ugurc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/runner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\ugurc\\Desktop\\Trainingslog\\TrainingLogbuch\\TrainingLogbuch.csproj": {
-              "projectPath": "C:\\Users\\ugurc\\Desktop\\Trainingslog\\TrainingLogbuch\\TrainingLogbuch.csproj"
+            "/home/runner/work/SoftwareProzesseProject/SoftwareProzesseProject/TrainingLogbuch/TrainingLogbuch.csproj": {
+              "projectPath": "/home/runner/work/SoftwareProzesseProject/SoftwareProzesseProject/TrainingLogbuch/TrainingLogbuch.csproj"
             }
           }
         }
@@ -7459,7 +7457,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/runner/.dotnet/sdk/6.0.414/RuntimeIdentifierGraph.json"
       }
     }
   }
