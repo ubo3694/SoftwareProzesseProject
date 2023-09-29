@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[7.0.11, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.7.2, )"
+            },
             "Microsoft.TestPlatform": {
               "target": "Package",
               "version": "[17.7.2, )"
@@ -62,17 +66,23 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[13.0.3, )"
             },
             "NuGet.Frameworks": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.7.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "xunit": {
+              "target": "Package",
+              "version": "[2.5.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.5.1, )"
             }
