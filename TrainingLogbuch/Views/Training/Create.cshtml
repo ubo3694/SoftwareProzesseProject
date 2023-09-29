@@ -1,0 +1,66 @@
+﻿@model Assignment1.Model.Training
+
+@{
+    ViewData["Title"] = "Training hinzufügen";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Start">Beginnzeitpunkt:</label>
+        <input asp-for="Start" class="form-control" type="datetime-local" />
+        <span asp-validation-for="Start" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="End">Endzeitpunkt:</label>
+        <input asp-for="End" class="form-control" type="datetime-local" />
+        <span asp-validation-for="End" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Trainer">Trainer:</label>
+        <input asp-for="Trainer" class="form-control" />
+        <span asp-validation-for="Trainer" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Duration">Dauer (Minuten):</label>
+        <input asp-for="Duration" type="number" class="form-control" readonly />
+        <span asp-validation-for="Duration" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Beschreibung:</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Training hinzufügen</button>
+</form>
+
+<div class="mt-3">
+    <a asp-action="Index">Zurück zur Liste</a>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const startInput = document.querySelector("[name='Start']");
+        const endInput = document.querySelector("[name='End']");
+        const durationInput = document.querySelector("[name='Duration']");
+
+        startInput.addEventListener("change", updateDuration);
+        endInput.addEventListener("change", updateDuration);
+
+        function updateDuration() {
+            const start = new Date(startInput.value);
+            const end = new Date(endInput.value);
+            const duration = (end - start) / (1000 * 60); // Dauer in Minuten
+
+            if (!isNaN(duration) && duration > 0) {
+                durationInput.value = Math.round(duration);
+            }
+        }
+    });
+</script>

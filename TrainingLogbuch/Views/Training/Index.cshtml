@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Assignment1.Model.Training>
+
+@{
+    ViewData["Title"] = "Alle Trainings";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Alle Trainings</h1>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Beginnzeitpunkt</th>
+            <th>Endzeitpunkt</th>
+            <th>Trainer</th>
+            <th>Dauer (Minuten)</th>
+            <th>Beschreibung</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var training in Model)
+            {
+                <tr>
+                    <td>@training.Id</td>
+                    <td>@training.Start</td>
+                    <td>@training.End</td>
+                    <td>@training.Trainer</td>
+                    <td>@training.Duration</td>
+                    <td>@training.Description</td>
+                    <td><a asp-action="Details" asp-route-id="@training.Id" class="btn btn-info">Details</a></td>
+                    <td>
+                        <form asp-action="Delete" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@training.Id" />
+                            <button type="submit" class="btn btn-danger">Löschen</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="4"></td>
+                <td>
+                    Gesamtdauer: @Model.Sum(t => t.Duration) Minuten
+                </td>
+                <td colspan="2"></td>
+            </tr>
+        }
+        else
+        {
+            <p>Keine Trainingsdaten verfügbar.</p>
+        }
+    </tbody>
+</table>
+
+<div class="text-center mt-4">
+    <a asp-action="Create" class="btn btn-primary">Neues Training hinzufügen</a>
+</div>
