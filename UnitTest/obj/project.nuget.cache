@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WMoZ9eR3Zm8bRKoVuElzRFmGB5eOjUrUcI/CCjb70cVvdEy+vKtqkGCX8wb1JYBcgfh2h7SfxXxsyUBYn3IjRg==",
+  "dgSpecHash": "PTPobVoi782XFN75ZGZL71y3xKL2x0/5rLn4R+hB3J7ZUiXFY3BYtBmxRwftWXpLEjsXWzsPHD8xG1OL0C3Zrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ugurc\\Desktop\\Trainingslog\\UnitTest\\UnitTest.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\ugurc\\.nuget\\packages\\microsoft.net.test.sdk\\17.1.0\\microsoft.net.test.sdk.17.1.0.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\ugurc\\.nuget\\packages\\microsoft.testplatform\\17.7.2\\microsoft.testplatform.17.7.2.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.1.0\\microsoft.testplatform.objectmodel.17.1.0.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\microsoft.testplatform.testhost\\17.1.0\\microsoft.testplatform.testhost.17.1.0.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
