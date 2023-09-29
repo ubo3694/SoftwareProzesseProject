@@ -32,6 +32,8 @@ jobs:
     - name: Push to Main Branch
       if: ${{ success() }}
       run: |
+        git config --global user.email "ubo3694@students.fhv.at"
+        git config --global user.name "ubo3694"
         git add .
         git commit -m "CI: Unit tests passed"
         git push
