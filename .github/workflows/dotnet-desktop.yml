@@ -1,4 +1,4 @@
-name: CI
+name: Build and Test
 
 on:
   push:
@@ -10,23 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: '6.0.x'
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore TrainingLogbuch/TrainingLogbuch.sln
+    - name: Restore dependencies
+      run: dotnet restore TrainingLogbuch/TrainingLogbuch.sln
 
-      - name: Build
-        run: dotnet build TrainingLogbuch/TrainingLogbuch.sln --no-restore
+    - name: Build
+      run: dotnet build TrainingLogbuch/TrainingLogbuch.sln --no-restore
 
-      - name: Test
-        run: dotnet test TrainingLogbuch/TrainingLogbuch.sln --no-build
+    # Führen Sie die Unit-Tests mit dem dotnet test-Befehl aus.
+    - name: Test
+      run: dotnet test TrainingLogbuch/TrainingLogbuch.sln --no-build
 
-      - name: Push to main if tests pass
-        if: success()  # Dieser Schritt wird nur ausgeführt, wenn die vorherigen Schritte erfolgreich waren
-        run: git push origin main
+    - name: Check test results and push on success
+      run: |
+        if [ -f "TrainingLogbuch/UnitTest/TestResults/TESTS-TestAdapter.xml" ]; then
+          echo "Tests were successful. Pushing changes to main..."
+          git config --global user.email "ubo3694@students.fhv.at"
+          git config --global user.name "ubo3694"
+          git add .
+          git commit -m "Unit tests passed"
+          git push origin main
+        else
+          echo "Tests failed. Changes won't be pushed."
+        fi
