@@ -28,22 +28,10 @@ jobs:
     - name: Test
       run: dotnet test TrainingLogbuch/TrainingLogbuch.sln --no-build
 
-    # Fügen Sie hier einen Schritt hinzu, um zu überprüfen, ob die Tests erfolgreich waren, z.B.:
-    - name: Check Test Results
+    # Führen Sie den Push-Befehl nur aus, wenn die Tests erfolgreich sind.
+    - name: Push to Main Branch
+      if: ${{ success() }}
       run: |
-        if [ $? -eq 0 ]; then
-          echo "Unit tests passed. Proceeding with the push..."
-        else
-          echo "Unit tests failed. Aborting the push."
-          exit 1
-        fi
-
-    # Führen Sie das Pushen nur aus, wenn die Tests erfolgreich waren.
-    - name: Push to Main
-      if: success()
-      run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
         git add .
         git commit -m "CI: Unit tests passed"
         git push
