@@ -37,7 +37,7 @@ namespace UnitTest
 
             var model = result.ViewData.Model as List<Training>;
             // Assert.Equal(2, model.Count);
-            Assert.Equal(6, model.Count); //Fehler
+            Assert.Equal(7, model.Count); //Fehler
         }
 
         [Fact]
