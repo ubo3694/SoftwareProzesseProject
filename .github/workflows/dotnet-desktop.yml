@@ -1,5 +1,3 @@
-name: .NET Core CI
-
 on:
   push:
     branches:
@@ -16,7 +14,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '6.0.x' # Hier können Sie die gewünschte .NET-Version einstellen.
+        dotnet-version: '6.0.x'
 
     - name: Restore dependencies
       run: dotnet restore TrainingLogbuch/TrainingLogbuch.sln
@@ -24,16 +22,12 @@ jobs:
     - name: Build
       run: dotnet build TrainingLogbuch/TrainingLogbuch.sln --no-restore
 
-    # Führen Sie die Unit-Tests mit dem dotnet test-Befehl aus.
     - name: Test
       run: dotnet test TrainingLogbuch/TrainingLogbuch.sln --no-build
 
-    # Führen Sie den Push-Befehl nur aus, wenn die Tests erfolgreich sind.
-    - name: Push to Main Branch
-      if: ${{ success() }}
+    - name: Push to main if tests pass
+      if: success()
       run: |
         git config --global user.email "ubo3694@students.fhv.at"
         git config --global user.name "ubo3694"
-        git add .
-        git commit -m "CI: Unit tests passed"
-        git push
+        git push origin main
