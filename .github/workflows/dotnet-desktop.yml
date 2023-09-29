@@ -17,12 +17,14 @@ jobs:
         dotnet-version: '6.0.x' # Hier können Sie die gewünschte .NET-Version einstellen.
 
     - name: Restore dependencies
-      run: dotnet restore ConsoleApp1/ConsoleApp1.sln
+      run: dotnet restore
 
-    - name: Build
-      run: dotnet build ConsoleApp1/ConsoleApp1.sln --no-restore
+    - name: Build and test
+      run: dotnet test
 
-    # Führen Sie die Unit-Tests mit dem dotnet test-Befehl aus.
-    - name: Test
-      run: dotnet test ConsoleApp1/ConsoleApp1.sln --no-build
-
+    - name: Publish test results
+      if: always()
+      uses: actions/checkout@v2
+      with:
+        repository: actions/upload-artifact
+        path: test-results
