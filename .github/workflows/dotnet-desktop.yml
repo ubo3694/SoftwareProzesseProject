@@ -1,22 +1,20 @@
-name: .NET Desktop
+name: .NET Core CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 3.1.x  # Wählen Sie Ihre gewünschte .NET-Version
+        dotnet-version: '6.0.x' # Hier können Sie die gewünschte .NET-Version einstellen.
 
     - name: Restore dependencies
       run: dotnet restore
