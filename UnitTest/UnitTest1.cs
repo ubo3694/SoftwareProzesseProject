@@ -37,7 +37,7 @@ namespace UnitTest
 
             var model = result.ViewData.Model as List<Training>;
             // Assert.Equal(2, model.Count);
-            Assert.Equal(2, model.Count); //Fehler
+            Assert.Equal(2, model?.Count); //Fehler
         }
 
         [Fact]
@@ -92,7 +92,7 @@ namespace UnitTest
             Assert.NotNull(result.ViewData.Model);
 
             var model = result.ViewData.Model as Training;
-            Assert.Equal(existingTraining.Id, model.Id);
+            Assert.Equal(existingTraining.Id, model?.Id);
         }
 
         // Add more test methods as needed...
