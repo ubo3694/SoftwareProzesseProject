@@ -1,9 +1,9 @@
 name: Build and Test
 
 on:
-  push:
-    branches-ignore:
-      - main # Ignoriere main, um eine mögliche endlose Build-Schleife zu verhindern
+  pull_request:
+    branches: [ main ]
+
 
 jobs:
   build_and_test:
