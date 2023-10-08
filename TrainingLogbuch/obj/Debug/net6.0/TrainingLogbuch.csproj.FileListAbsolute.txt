@@ -406,3 +406,4 @@ C:\Users\ugurc\Desktop\Trainingslog\TrainingLogbuch\obj\Debug\net6.0\refint\Trai
 C:\Users\ugurc\Desktop\Trainingslog\TrainingLogbuch\obj\Debug\net6.0\TrainingLogbuch.pdb
 C:\Users\ugurc\Desktop\Trainingslog\TrainingLogbuch\obj\Debug\net6.0\TrainingLogbuch.genruntimeconfig.cache
 C:\Users\ugurc\Desktop\Trainingslog\TrainingLogbuch\obj\Debug\net6.0\ref\TrainingLogbuch.dll
+C:\Users\ugurc\Desktop\Trainingslog\TrainingLogbuch\bin\Debug\net6.0\stylecop.json

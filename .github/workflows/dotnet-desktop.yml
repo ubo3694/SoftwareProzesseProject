@@ -1,9 +1,6 @@
 name: Build and Test
 
 on:
-  push:
-    branches-ignore:
-      - main
   pull_request:
     branches:
       - main
@@ -15,6 +12,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v2
@@ -29,3 +28,24 @@ jobs:
 
     - name: Test
       run: dotnet test TrainingLogbuch/TrainingLogbuch.sln --no-build
+
+  push_to_main:
+    needs: build_and_test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        ref: main  # Explicitly checkout main branch
+        fetch-depth: 0  # Fetch all history for all branches and tags
+
+    - name: Setup Git User
+      run: |
+        git config --global user.email "ubo3694@students.fhv.at"
+        git config --global user.name "ugurcan Borihan"
+
+    - name: Merge to Main
+      run: |
+        git merge --no-ff origin/${{ github.head_ref }}  # Merge the source branch
+        git push origin main
