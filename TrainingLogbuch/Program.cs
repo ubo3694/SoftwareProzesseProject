@@ -9,6 +9,8 @@ using Assignment1;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+//TEST
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
