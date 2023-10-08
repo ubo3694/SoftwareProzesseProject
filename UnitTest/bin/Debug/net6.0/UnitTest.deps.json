@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "UnitTest/1.0.0": {
         "dependencies": {
+          "Microsoft.CodeAnalysis.NetAnalyzers": "7.0.4",
           "Microsoft.EntityFrameworkCore.Design": "7.0.11",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.11",
           "Microsoft.NET.Test.Sdk": "17.7.2",
@@ -44,6 +45,7 @@
           }
         }
       },
+      "Microsoft.CodeAnalysis.NetAnalyzers/7.0.4": {},
       "Microsoft.CodeCoverage/17.7.2": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -1340,6 +1342,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.NetAnalyzers/7.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qkdUzgth6IBtGvGjII8PZ1B+dfXZ4VPXzlIGeE444vJlih/cVFTCTzF2ZY9s1buK1yLnkkDcTVGH2kyUWbyPTw==",
+      "path": "microsoft.codeanalysis.netanalyzers/7.0.4",
+      "hashPath": "microsoft.codeanalysis.netanalyzers.7.0.4.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/17.7.2": {
       "type": "package",
