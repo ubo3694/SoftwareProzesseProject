@@ -1,0 +1,25 @@
+name: StyleCop Check on Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  stylecop_check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore YourSolutionName.sln
+
+    - name: Build Solution
+      run: dotnet build YourSolutionName.sln --configuration Release
