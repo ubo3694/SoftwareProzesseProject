@@ -43,3 +43,5 @@ app.MapControllerRoute(
     pattern: "{controller=Training}/{action=Index}/{id?}");
 
 app.Run();
+
+//TEST UGI6
