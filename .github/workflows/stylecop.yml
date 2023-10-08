@@ -19,7 +19,7 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore YourSolutionName.sln
+      run: dotnet restore TrainingLogbuch/TrainingLogbuch.sln
 
     - name: Build Solution
-      run: dotnet build YourSolutionName.sln --configuration Release
+      run: dotnet build TrainingLogbuch/TrainingLogbuch.sln --configuration Release
