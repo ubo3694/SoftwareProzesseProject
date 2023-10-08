@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YArEyIk4rXAxU8MFiRCvlzYOJvOuYO2VuUg8U+4ug0bvcHpyMPi22pyoPjcfVaEBK+FE5I93yKVq0y9diuy8Ew==",
+  "dgSpecHash": "STOb52ho1e5X0YSb5LjqTngYFSdD80rxf/Lf8cBLAYNdrFzVBMkWCEPRvsHv5y5+qLoZlGc/DcbEsIX1X0ZdAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ugurc\\Desktop\\Trainingslog\\TrainingLogbuch\\TrainingLogbuch.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\ugurc\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\ugurc\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\ugurc\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
