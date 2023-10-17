@@ -22,7 +22,7 @@ jobs:
       run: dotnet restore TrainingLogbuch/TrainingLogbuch.sln
 
 #    - name: Build Solution
-#      run: dotnet build TrainingLogbuch/TrainingLogbuch.sln --configuration Release --warnaserror
+#       run: dotnet build TrainingLogbuch/TrainingLogbuch.sln --configuration Release --warnaserror
       
     - name: Build Solution
       run: dotnet build TrainingLogbuch/TrainingLogbuch.sln
